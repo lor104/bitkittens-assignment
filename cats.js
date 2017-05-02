@@ -14,7 +14,11 @@ $(document).ready(function() {
       console.log(catList[1]["name"]);
       console.log(catList[2]["name"]);
 
-      
+      for (var i = 0; i < catList.length; i++) {
+        cat = catList[i]
+        id = '#cat' + (i + 1)
+        $('<img>').attr('src', cat.photo).appendTo(id)
+      }
 
     });
 
