@@ -9,6 +9,7 @@ $(document).ready(function() {
       dataType: 'json'
     }).done(function(data) {
       var catList = data["cats"];
+      $('div.cat-box > img').remove()
       for (var i = 0; i < catList.length; i++) {
         cat = catList[i]
         id = '#cat' + (i + 1)
